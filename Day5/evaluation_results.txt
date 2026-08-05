@@ -1,0 +1,35 @@
+MODEL COMPARISON TABLE
+============================================================
+                     Accuracy  Precision  Recall  F1 Score
+Model                                                     
+Logistic Regression     0.556      0.625   0.833     0.714
+Decision Tree           0.444      0.571   0.667     0.615
+
+Confusion Matrix - Logistic Regression:
+[[0 3]
+ [1 5]]
+
+Confusion Matrix - Decision Tree:
+[[0 3]
+ [2 4]]
+
+Classification Report - Logistic Regression:
+              precision    recall  f1-score   support
+
+        Fail       0.00      0.00      0.00         3
+        Pass       0.62      0.83      0.71         6
+
+    accuracy                           0.56         9
+   macro avg       0.31      0.42      0.36         9
+weighted avg       0.42      0.56      0.48         9
+
+
+Classification Report - Decision Tree:
+              precision    recall  f1-score   support
+
+        Fail       0.00      0.00      0.00         3
+        Pass       0.57      0.67      0.62         6
+
+    accuracy                           0.44         9
+   macro avg       0.29      0.33      0.31         9
+weighted avg       0.38      0.44      0.41         9
