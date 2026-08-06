@@ -1,0 +1,38 @@
+DAY 6 - MODEL COMPARISON: BASELINE (Day 5 Logistic Regression) vs TUNED (GridSearchCV Random Forest)
+======================================================================
+                                     Accuracy  Precision  Recall  F1 Score  ROC-AUC
+Model                                                                              
+Baseline (Day5 Logistic Regression)     0.667      0.667   1.000     0.800    0.278
+Tuned Random Forest (GridSearchCV)      0.556      0.625   0.833     0.714    0.556
+
+Best hyperparameters found: {'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 200}
+Best CV F1 score: 0.722
+
+Confusion Matrix - Baseline:
+[[0 3]
+ [0 6]]
+
+Confusion Matrix - Tuned:
+[[0 3]
+ [1 5]]
+
+Classification Report - Baseline:
+              precision    recall  f1-score   support
+
+        Fail       0.00      0.00      0.00         3
+        Pass       0.67      1.00      0.80         6
+
+    accuracy                           0.67         9
+   macro avg       0.33      0.50      0.40         9
+weighted avg       0.44      0.67      0.53         9
+
+
+Classification Report - Tuned:
+              precision    recall  f1-score   support
+
+        Fail       0.00      0.00      0.00         3
+        Pass       0.62      0.83      0.71         6
+
+    accuracy                           0.56         9
+   macro avg       0.31      0.42      0.36         9
+weighted avg       0.42      0.56      0.48         9
