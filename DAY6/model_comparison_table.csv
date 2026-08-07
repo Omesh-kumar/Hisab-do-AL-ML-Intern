@@ -1,0 +1,3 @@
+Model,Accuracy,Precision,Recall,F1 Score,ROC-AUC
+Baseline (Day5 Logistic Regression),0.667,0.667,1.0,0.8,0.278
+Tuned Random Forest (GridSearchCV),0.556,0.625,0.833,0.714,0.556
