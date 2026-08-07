@@ -1,0 +1,71 @@
+{
+  "info": {
+    "name": "Student Performance Prediction API - Day 7",
+    "description": "HisabDo AI/ML Internship - Day 7 Task collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Root",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://127.0.0.1:8000/", "host": ["127", "0", "0", "1"], "port": "8000", "path": [""] }
+      }
+    },
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://127.0.0.1:8000/health", "host": ["127", "0", "0", "1"], "port": "8000", "path": ["health"] }
+      }
+    },
+    {
+      "name": "Predict - Pass Case",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"attendance\": 85,\n  \"assignment_score\": 78,\n  \"midterm_score\": 70,\n  \"final_score\": 65\n}"
+        },
+        "url": { "raw": "http://127.0.0.1:8000/predict", "host": ["127", "0", "0", "1"], "port": "8000", "path": ["predict"] }
+      }
+    },
+    {
+      "name": "Predict - Fail Case",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"attendance\": 40,\n  \"assignment_score\": 30,\n  \"midterm_score\": 25,\n  \"final_score\": 20\n}"
+        },
+        "url": { "raw": "http://127.0.0.1:8000/predict", "host": ["127", "0", "0", "1"], "port": "8000", "path": ["predict"] }
+      }
+    },
+    {
+      "name": "Predict - Invalid Input (missing field)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"attendance\": 85,\n  \"assignment_score\": 78,\n  \"midterm_score\": 70\n}"
+        },
+        "url": { "raw": "http://127.0.0.1:8000/predict", "host": ["127", "0", "0", "1"], "port": "8000", "path": ["predict"] }
+      }
+    },
+    {
+      "name": "Predict - Invalid Input (out of range)",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"attendance\": 150,\n  \"assignment_score\": 78,\n  \"midterm_score\": 70,\n  \"final_score\": 65\n}"
+        },
+        "url": { "raw": "http://127.0.0.1:8000/predict", "host": ["127", "0", "0", "1"], "port": "8000", "path": ["predict"] }
+      }
+    }
+  ]
+}
