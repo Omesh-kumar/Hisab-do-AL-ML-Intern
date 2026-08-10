@@ -1,0 +1,46 @@
+{
+  "model": "TF-IDF + Logistic Regression (scikit-learn)",
+  "test_accuracy_on_holdout_data": 0.25,
+  "sample_predictions": [
+    {
+      "input_expense_description": "bought vegetables and milk from store",
+      "predicted_category": "Grocery",
+      "confidence": 0.23
+    },
+    {
+      "input_expense_description": "paid careem for airport ride",
+      "predicted_category": "Transport",
+      "confidence": 0.2
+    },
+    {
+      "input_expense_description": "monthly internet bill payment",
+      "predicted_category": "Utilities",
+      "confidence": 0.314
+    },
+    {
+      "input_expense_description": "dinner with family at restaurant",
+      "predicted_category": "Food & Dining",
+      "confidence": 0.278
+    },
+    {
+      "input_expense_description": "paid semester fee for university",
+      "predicted_category": "Education",
+      "confidence": 0.257
+    },
+    {
+      "input_expense_description": "bought medicine from pharmacy",
+      "predicted_category": "Health",
+      "confidence": 0.232
+    },
+    {
+      "input_expense_description": "new shoes bought from mall",
+      "predicted_category": "Grocery",
+      "confidence": 0.131
+    },
+    {
+      "input_expense_description": "received payment from client for project",
+      "predicted_category": "Income",
+      "confidence": 0.241
+    }
+  ]
+}
