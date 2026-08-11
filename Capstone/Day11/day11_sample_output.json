@@ -1,0 +1,71 @@
+{
+  "model": "TF-IDF + Logistic Regression (scikit-learn)",
+  "total_samples": 9,
+  "successful": 5,
+  "failed_validation": 4,
+  "results": [
+    {
+      "transaction_id": "TXN1001",
+      "status": "success",
+      "error": null,
+      "predicted_category": "Grocery",
+      "confidence": 0.213
+    },
+    {
+      "transaction_id": "TXN1002",
+      "status": "success",
+      "error": null,
+      "predicted_category": "Transport",
+      "confidence": 0.291
+    },
+    {
+      "transaction_id": "TXN1003",
+      "status": "success",
+      "error": null,
+      "predicted_category": "Utilities",
+      "confidence": 0.32
+    },
+    {
+      "transaction_id": "TXN1004",
+      "status": "success",
+      "error": null,
+      "predicted_category": "Food & Dining",
+      "confidence": 0.281
+    },
+    {
+      "transaction_id": "TXN1005",
+      "status": "success",
+      "error": null,
+      "predicted_category": "Education",
+      "confidence": 0.277
+    },
+    {
+      "transaction_id": "TXN1006",
+      "status": "error",
+      "error": "Missing required field: 'description'",
+      "predicted_category": null,
+      "confidence": null
+    },
+    {
+      "transaction_id": "TXN1007",
+      "status": "error",
+      "error": "Field 'amount' must be greater than 0",
+      "predicted_category": null,
+      "confidence": null
+    },
+    {
+      "transaction_id": "TXN1008",
+      "status": "error",
+      "error": "Field 'amount' must be a valid number",
+      "predicted_category": null,
+      "confidence": null
+    },
+    {
+      "transaction_id": "TXN1009",
+      "status": "error",
+      "error": "Missing required field: 'description'",
+      "predicted_category": null,
+      "confidence": null
+    }
+  ]
+}
