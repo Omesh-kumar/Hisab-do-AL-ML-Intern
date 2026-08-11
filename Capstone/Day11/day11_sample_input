@@ -1,0 +1,64 @@
+[
+  {
+    "transaction_id": "TXN1001",
+    "description": "Grocery shopping at Imtiaz Super Market",
+    "amount": 3450,
+    "vendor": "Imtiaz Super Market",
+    "date": "2026-08-10"
+  },
+  {
+    "transaction_id": "TXN1002",
+    "description": "Careem ride to office",
+    "amount": 320,
+    "vendor": "Careem",
+    "date": "2026-08-10"
+  },
+  {
+    "transaction_id": "TXN1003",
+    "description": "K-Electric bill payment",
+    "amount": 8500,
+    "vendor": "K-Electric",
+    "date": "2026-08-09"
+  },
+  {
+    "transaction_id": "TXN1004",
+    "description": "Dinner with family at Kolachi restaurant",
+    "amount": 4200,
+    "vendor": "Kolachi",
+    "date": "2026-08-08"
+  },
+  {
+    "transaction_id": "TXN1005",
+    "description": "SMIU semester fee payment",
+    "amount": 45000,
+    "vendor": "SMIU",
+    "date": "2026-08-05"
+  },
+  {
+    "transaction_id": "TXN1006",
+    "description": "",
+    "amount": 500,
+    "vendor": "Unknown",
+    "date": "2026-08-10"
+  },
+  {
+    "transaction_id": "TXN1007",
+    "description": "medicine from pharmacy",
+    "amount": -200,
+    "vendor": "Dawakhana",
+    "date": "2026-08-10"
+  },
+  {
+    "transaction_id": "TXN1008",
+    "description": "grocery items",
+    "amount": "abc",
+    "vendor": "Store",
+    "date": "2026-08-10"
+  },
+  {
+    "transaction_id": "TXN1009",
+    "amount": 600,
+    "vendor": "Unknown",
+    "date": "2026-08-10"
+  }
+]
