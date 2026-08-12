@@ -1,0 +1,132 @@
+{
+  "health_check": {
+    "status": "ok",
+    "model_loaded": true
+  },
+  "test_results": [
+    {
+      "request": {
+        "transaction_id": "TXN2001",
+        "description": "Grocery shopping at Imtiaz Super Market",
+        "amount": 3450,
+        "vendor": "Imtiaz Super Market",
+        "date": "2026-08-12"
+      },
+      "http_status": 200,
+      "response_body": {
+        "transaction_id": "TXN2001",
+        "status": "success",
+        "predicted_category": "Grocery",
+        "confidence": 0.213,
+        "error": null,
+        "latency_ms": 2.64
+      }
+    },
+    {
+      "request": {
+        "transaction_id": "TXN2002",
+        "description": "Careem ride to office",
+        "amount": 320,
+        "vendor": "Careem",
+        "date": "2026-08-12"
+      },
+      "http_status": 200,
+      "response_body": {
+        "transaction_id": "TXN2002",
+        "status": "success",
+        "predicted_category": "Transport",
+        "confidence": 0.291,
+        "error": null,
+        "latency_ms": 1.44
+      }
+    },
+    {
+      "request": {
+        "transaction_id": "TXN2003",
+        "description": "K-Electric bill payment",
+        "amount": 8500,
+        "vendor": "K-Electric",
+        "date": "2026-08-12"
+      },
+      "http_status": 200,
+      "response_body": {
+        "transaction_id": "TXN2003",
+        "status": "success",
+        "predicted_category": "Utilities",
+        "confidence": 0.32,
+        "error": null,
+        "latency_ms": 1.49
+      }
+    },
+    {
+      "request": {
+        "transaction_id": "TXN2004",
+        "description": "xyz random gibberish text",
+        "amount": 100,
+        "vendor": null,
+        "date": "2026-08-12"
+      },
+      "http_status": 200,
+      "response_body": {
+        "transaction_id": "TXN2004",
+        "status": "error",
+        "predicted_category": null,
+        "confidence": null,
+        "error": "Low model confidence \u2014 category needs manual selection",
+        "latency_ms": 1.33
+      }
+    },
+    {
+      "request": {
+        "transaction_id": "TXN2005",
+        "description": "",
+        "amount": 500,
+        "vendor": null,
+        "date": "2026-08-12"
+      },
+      "http_status": 422,
+      "response_body": {
+        "detail": [
+          {
+            "type": "value_error",
+            "loc": [
+              "body",
+              "description"
+            ],
+            "msg": "Value error, description must not be empty",
+            "input": "",
+            "ctx": {
+              "error": {}
+            }
+          }
+        ]
+      }
+    },
+    {
+      "request": {
+        "transaction_id": "TXN2006",
+        "description": "medicine from pharmacy",
+        "amount": -50,
+        "vendor": null,
+        "date": "2026-08-12"
+      },
+      "http_status": 422,
+      "response_body": {
+        "detail": [
+          {
+            "type": "value_error",
+            "loc": [
+              "body",
+              "amount"
+            ],
+            "msg": "Value error, amount must be greater than 0",
+            "input": -50,
+            "ctx": {
+              "error": {}
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
