@@ -1,0 +1,31 @@
+from fastapi.testclient import TestClient
+from categorization_service import app
+import json
+
+client = TestClient(app)
+
+test_requests = [
+    {"transaction_id": "TXN2001", "description": "Grocery shopping at Imtiaz Super Market", "amount": 3450, "vendor": "Imtiaz Super Market", "date": "2026-08-12"},
+    {"transaction_id": "TXN2002", "description": "Careem ride to office", "amount": 320, "vendor": "Careem", "date": "2026-08-12"},
+    {"transaction_id": "TXN2003", "description": "K-Electric bill payment", "amount": 8500, "vendor": "K-Electric", "date": "2026-08-12"},
+    {"transaction_id": "TXN2004", "description": "xyz random gibberish text", "amount": 100, "vendor": None, "date": "2026-08-12"},  # low confidence case
+    {"transaction_id": "TXN2005", "description": "", "amount": 500, "vendor": None, "date": "2026-08-12"},  # invalid: empty description
+    {"transaction_id": "TXN2006", "description": "medicine from pharmacy", "amount": -50, "vendor": None, "date": "2026-08-12"},  # invalid: negative amount
+]
+
+results = []
+for req in test_requests:
+    response = client.post("/categorize", json=req)
+    results.append({
+        "request": req,
+        "http_status": response.status_code,
+        "response_body": response.json()
+    })
+
+health = client.get("/health").json()
+
+output = {"health_check": health, "test_results": results}
+print(json.dumps(output, indent=2))
+
+with open("day12_api_test_results.json", "w") as f:
+    json.dump(output, f, indent=2)
