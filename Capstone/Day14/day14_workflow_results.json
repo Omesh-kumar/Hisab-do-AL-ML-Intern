@@ -1,0 +1,27 @@
+[
+  {
+    "transaction_id": "TXN4001",
+    "app_behavior": "Auto-fill category: 'Grocery' (confidence 0.252)",
+    "detail": null
+  },
+  {
+    "transaction_id": "TXN4002",
+    "app_behavior": "Auto-fill category: 'Transport' (confidence 0.192)",
+    "detail": null
+  },
+  {
+    "transaction_id": "TXN4003",
+    "app_behavior": "Show manual category dropdown (input rejected)",
+    "detail": "Value error, description must not be empty"
+  },
+  {
+    "transaction_id": "TXN4004",
+    "app_behavior": "Show manual category dropdown (AI unsure)",
+    "detail": "Low model confidence \u2014 category needs manual selection"
+  },
+  {
+    "transaction_id": "TXN4005",
+    "app_behavior": "Auto-fill category: 'Income' (confidence 0.246)",
+    "detail": null
+  }
+]
